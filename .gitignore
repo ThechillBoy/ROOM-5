@@ -1,0 +1,87 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+# Reviewed templates without private credentials
+!/apps/mobile/.env.example
+!/apps/mobile/.env.production.example
+!/apps/server/.env.production.example
+.envrc
+
+# Private credentials and signing material
+.credentials/
+.secrets/
+secrets/
+.aws/
+.ssh/
+.netrc
+.npmrc
+credentials.json
+*service-account*.json
+google-services.json
+GoogleService-Info.plist
+*.keystore
+*.jks
+android-signing.properties
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.mobileprovision
+
+# Native/Expo caches and packaged build output
+.gradle/
+.cxx/
+.kotlin/
+.expo/
+web-build/
+local.properties
+*.apk
+*.aab
+*.ipa
+*.jsbundle
+*.hprof
+
+# Local database configuration and diagnostics with private data
+/docker-compose.yml
+/q.sql
+/diag-screenshot.png
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+
+# Database
+*.sqlite
+*.db
+
+# Docker
+docker-compose.override.yml
+
+# Prisma
+apps/server/prisma/migrations/.migration_lock.toml

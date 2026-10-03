@@ -1,0 +1,1 @@
+export type { Guest, Room, Message } from "@room5/shared";

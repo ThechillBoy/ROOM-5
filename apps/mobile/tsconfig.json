@@ -1,0 +1,26 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "paths": {
+      "@room5/shared": [
+        "../../packages/shared/dist/index.d.ts"
+      ],
+      "@room5/shared/*": [
+        "../../packages/shared/dist/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "android",
+    "ios"
+  ]
+}

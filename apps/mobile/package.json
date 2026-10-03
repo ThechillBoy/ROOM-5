@@ -1,0 +1,45 @@
+{
+  "name": "@room5/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "android:upload-key": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/create-upload-key.ps1",
+    "android:release:check": "node scripts/android-release.cjs --check",
+    "android:release": "node scripts/android-release.cjs",
+    "prebuild": "expo prebuild --platform android --clean",
+    "build": "expo export --platform android",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^15.0.2",
+    "@preeternal/react-native-cookie-manager": "^7.0.0",
+    "@room5/shared": "^0.1.0",
+    "expo": "~57.0.25",
+    "expo-build-properties": "~57.0.22",
+    "expo-clipboard": "~57.0.2",
+    "expo-constants": "~57.0.19",
+    "expo-linear-gradient": "~57.0.2",
+    "expo-linking": "~57.0.11",
+    "expo-router": "~57.0.23",
+    "expo-secure-store": "~57.0.4",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-gesture-handler": "~2.32.0",
+    "react-native-reanimated": "4.5.1",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-worklets": "0.10.1",
+    "socket.io-client": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "~57.0.2",
+    "typescript": "~6.0.3"
+  }
+}

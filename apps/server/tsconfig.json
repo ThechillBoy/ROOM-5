@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "composite": true,
+    "tsBuildInfoFile": "dist/tsbuildinfo",
+    "paths": {
+      "@room5/shared": ["../../packages/shared/dist/index.d.ts"],
+      "@room5/shared/*": ["../../packages/shared/dist/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "prisma"],
+  "references": [{ "path": "../../packages/shared" }]
+}

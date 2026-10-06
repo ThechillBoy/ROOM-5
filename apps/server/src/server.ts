@@ -36,8 +36,8 @@ async function startServer(): Promise<void> {
     await connectSessionStore();
     if (shuttingDown) return;
 
-    httpServer.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+    httpServer.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server listening on 0.0.0.0:${PORT}`);
       console.log(`Environment: ${env.NODE_ENV}`);
     });
   } catch {

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://room-5.dk0455867.workers.dev/sitemap.xml

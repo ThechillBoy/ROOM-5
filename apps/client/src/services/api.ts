@@ -1,6 +1,7 @@
 import { Guest, Room, Message } from "@room5/shared";
 
-const API_BASE = import.meta.env.VITE_API_URL || "/api";
+// Production sessions use the same-origin Worker proxy, even with old build variables.
+const API_BASE = import.meta.env.PROD ? "/api" : import.meta.env.VITE_API_URL || "/api";
 
 class ApiError extends Error {
   public readonly status: number;

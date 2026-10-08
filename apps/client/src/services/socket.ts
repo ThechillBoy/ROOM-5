@@ -1,7 +1,9 @@
 import { io, Socket } from "socket.io-client";
 import { MessageWithGuest } from "@room5/shared";
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:3000";
+const SOCKET_URL = import.meta.env.PROD
+  ? window.location.origin
+  : import.meta.env.VITE_SOCKET_URL || "http://localhost:3000";
 
 export type Message = MessageWithGuest & { tempId?: string };
 
